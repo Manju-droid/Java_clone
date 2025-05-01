@@ -7,8 +7,8 @@ pipeline{
                        sh '''
                         ssh -o strictHostKeyChecking=no ubuntu@10.1.1.106 '
                         rm -rf project-2 || true &&
-                        git clone https://github.com/Manju-droid/Java_clone.git project-1 || true &&
-                        cd project-1  &&
+                        git clone https://github.com/Manju-droid/Java_clone.git javaproject-1 || true &&
+                        cd javaproject-1  &&
                         docker stop container-1 || true &&
                         docker rm container-1 || true &&
                         docker build -t image-1 . &&
