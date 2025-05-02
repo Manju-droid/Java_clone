@@ -1,0 +1,20 @@
+---
+
+- name: Docker installation
+  hosts: all
+  become: true
+  tasks:
+   - name: docker installation
+     apt: 
+         name: docker.io
+         state: present
+
+   - name: docker start and enabled
+     service:
+         name: docker
+         state: started
+         enabled: true
+
+
+    
+      
